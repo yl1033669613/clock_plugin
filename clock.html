@@ -2,35 +2,26 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>test</title>
-	<link rel="stylesheet" href="clock.css">
+	<title>clock</title>
+	<link rel="stylesheet" href="./lib/clock.css">
 </head>
 <body>
-	<div class="clock box1"></div>
-	<div class="clock box2"></div>
+	<div class="clock" id="box"></div>
 </body>
-<script src="clock.js"></script>
+<script src="./lib/clock.js"></script>
 <script>
 	window.onload = function(){
-		var ele = document.getElementsByClassName("box1")[0];
-		var clock1 = new clock(ele,{
-			color:['#ccc','#ff0','#0ff'],
-			needleColor:[
-				"#f00",
-				"#00f",
-				"#333"
-			]
-		})
-
-		var ele = document.getElementsByClassName("box2")[0];
+		var ele = document.getElementById("box");
 		var clock2 = new clock(ele,{
-			color:['#ccc','#ff0','#0ff'],
+			diameter: 200,
+			color:['#f4f4f4','#f9f9f9'],
 			colorChangeTime:3000,
-			colorAutoChange:true,
+			colorAutoChange:false,
 			clickable:true,
+			showTimePoint:true,
 			needleColor:[
-				"#f00",
-				"#00f",
+				"#333",
+				"#333",
 				"#333"
 			]
 		})
