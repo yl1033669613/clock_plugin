@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<link rel="stylesheet" href="clock.css">
+</head>
+<body>
+	<div class="clock box1"></div>
+	<div class="clock box2"></div>
+</body>
+<script src="clock.js"></script>
+<script>
+	window.onload = function(){
+		var ele = document.getElementsByClassName("box1")[0];
+		var clock1 = new clock(ele,{
+			color:['#ccc','#ff0','#0ff'],
+			needleColor:[
+				"#f00",
+				"#00f",
+				"#333"
+			]
+		})
+
+		var ele = document.getElementsByClassName("box2")[0];
+		var clock2 = new clock(ele,{
+			color:['#ccc','#ff0','#0ff'],
+			colorChangeTime:3000,
+			colorAutoChange:true,
+			clickable:true,
+			needleColor:[
+				"#f00",
+				"#00f",
+				"#333"
+			]
+		})
+	}
+</script>
+</html>
